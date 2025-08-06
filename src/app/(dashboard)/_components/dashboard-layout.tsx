@@ -11,7 +11,11 @@ type TabType = (typeof tabs)[number];
 
 const tabContent: Record<TabType, React.ReactElement> = {
   overview: <Overview />,
-  transactions: <>No Transactions view yet</>,
+  transactions: (
+    <section className="space-y-[1.8rem] w-full">
+      No Transactions view yet
+    </section>
+  ),
 };
 
 export default function DashboardLayout() {
