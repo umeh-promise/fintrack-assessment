@@ -20,10 +20,10 @@ export default function TransactionsTable({
     <tr className="text-grey-300 text-[1.5rem] leading-[2rem] tracking-[-.5%] [&>td]:border-b-[1.5px] [&>td]:border-grey-50/[20%] w-full ">
       <td className="w-[48%] pb-[1.3rem] text-left">{date}</td>
       <td className="w-[18%] pb-[1.3rem] text-left">{remark}</td>
-      <td className="w-[12.3%] pb-[1.3rem] text-left">{amount}</td>
       <td className="w-[12.3%] pb-[1.3rem] text-left">
-        {formatAmount(Number(currency))}
+        {formatAmount(amount)}
       </td>
+      <td className="w-[12.3%] pb-[1.3rem] text-left">{currency}</td>
       <td className="w-fit pb-[1.3rem] text-left">
         <div className="flex items-center gap-[.8rem] bg-grey-100/[9%] px-[.8rem] py-[.4rem] rounded-[1.6rem] ">
           <span
