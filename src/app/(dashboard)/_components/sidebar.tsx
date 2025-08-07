@@ -1,10 +1,11 @@
 "use client";
 
-import { useCallback } from "react";
+import { RefObject, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/utils";
 import { Logo, MenuIcon } from "@/icons";
+import { useClickOutside } from "@/hooks/useClickOutside";
 
 export const sidebarRoutes = [
   {
@@ -37,6 +38,7 @@ export default function Sidebar({
   handleCloseSidebar: () => void;
 }) {
   const pathname = usePathname();
+  const sidebarRef = useRef<HTMLElement>(null);
 
   const activeMenuClass = useCallback(
     (link: { url: string }) => {
@@ -44,6 +46,11 @@ export default function Sidebar({
     },
     [pathname]
   );
+
+  useClickOutside({
+    refs: [sidebarRef as RefObject<HTMLElement>],
+    callbackHandler: handleCloseSidebar,
+  });
 
   return (
     <aside
@@ -62,6 +69,7 @@ export default function Sidebar({
             "translate-x-0": showMobileSidebar,
           }
         )}
+        ref={sidebarRef}
       >
         <header className="flex items-center gap-[2.4rem] lg:hidden">
           <button onClick={handleCloseSidebar}>
@@ -83,6 +91,7 @@ export default function Sidebar({
               <Link
                 href={link.url}
                 className="flex items-center gap-x-[1rem] px-[1.8rem] py-[.8rem]"
+                onClick={handleCloseSidebar}
               >
                 {link.title}
               </Link>
