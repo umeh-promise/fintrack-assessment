@@ -15,17 +15,17 @@ export const sidebarRoutes = [
   {
     id: 2,
     title: "Transactions",
-    url: "/transactions",
+    url: "#",
   },
   {
     id: 3,
     title: "Reports",
-    url: "/reports",
+    url: "#",
   },
   {
     id: 4,
     title: "Settings",
-    url: "/settings",
+    url: "#",
   },
 ];
 
@@ -48,16 +48,16 @@ export default function Sidebar({
   return (
     <aside
       className={cn(
-        "fixed inset-0 opacity-0 size-full z-40  transition-opacity duration-300 lg:flex pointer-events-none lg:static lg:inset-auto lg:opacity-100",
+        "fixed inset-0 opacity-0 size-full z-40  transition-opacity duration-300 lg:flex pointer-events-none lg:static lg:inset-auto lg:opacity-100 lg:pointer-events-auto",
         {
-          "opacity-100 bg-grey-700/10 lg:bg-white pointer-events-auto":
+          "opacity-100 bg-grey-700/10 lg:bg-background pointer-events-auto":
             showMobileSidebar,
         }
       )}
     >
       <nav
         className={cn(
-          "fixed top-0 left-0 h-full w-[28rem] bg-white z-50 flex flex-col transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:z-auto -translate-x-full no-scrollbar gap-y-[2.8rem] overflow-y-auto text-grey-300 md:flex p-[2rem] lg:w-full ",
+          "fixed top-0 left-0 h-full w-[28rem] bg-background z-50 flex flex-col transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:z-auto -translate-x-full no-scrollbar gap-y-[2.8rem] overflow-y-auto text-grey-300 md:flex p-[2rem] lg:w-full ",
           {
             "translate-x-0": showMobileSidebar,
           }

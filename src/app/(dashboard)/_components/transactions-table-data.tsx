@@ -17,14 +17,14 @@ export default function TransactionsTableData({
   type,
 }: Transaction) {
   return (
-    <tr className="text-grey-300 text-[1.5rem] leading-[2rem] tracking-[-.5%] [&>td]:border-b-[1.5px] [&>td]:border-grey-50/[20%] w-full ">
-      <td className="w-[48%] pb-[1.3rem] text-left">{date}</td>
-      <td className="w-[18%] pb-[1.3rem] text-left">{remark}</td>
-      <td className="w-[12.3%] pb-[1.3rem] text-left">
+    <tr className="text-grey-300 text-[1.5rem] leading-[2rem] tracking-[-.5%] [&>td]:border-b-[2px] [&>td]:border-grey-50/[20%] w-full ">
+      <td className="w-[48%] py-[1.3rem] text-left">{date}</td>
+      <td className="w-[18%] py-[1.3rem] text-left">{remark}</td>
+      <td className="w-[12.3%] py-[1.3rem] text-left">
         {formatAmount(amount)}
       </td>
-      <td className="w-[12.3%] pb-[1.3rem] text-left">{currency}</td>
-      <td className="w-fit pb-[1.3rem] text-left">
+      <td className="w-[12.3%] py-[1.3rem] text-left">{currency}</td>
+      <td className="w-fit py-[1.3rem] text-left">
         <div className="flex items-center gap-[.8rem] bg-grey-100/[9%] px-[.8rem] py-[.4rem] rounded-[1.6rem] ">
           <span
             className={cn("bg-green-300 size-[.6rem] rounded-full", {

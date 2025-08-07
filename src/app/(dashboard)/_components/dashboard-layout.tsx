@@ -5,17 +5,14 @@ import DashboardHeader from "./dashboard-header";
 import { cn } from "@/utils";
 import Overview from "./overview";
 import React from "react";
+import Transactions from "./transactions";
 
 const tabs = ["overview", "transactions"] as const;
 type TabType = (typeof tabs)[number];
 
 const tabContent: Record<TabType, React.ReactElement> = {
   overview: <Overview />,
-  transactions: (
-    <section className="space-y-[1.8rem] w-full">
-      No Transactions view yet
-    </section>
-  ),
+  transactions: <Transactions />,
 };
 
 export default function DashboardLayout() {

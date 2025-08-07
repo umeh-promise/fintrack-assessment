@@ -8,7 +8,7 @@ export default function DashboardHeader() {
         <div className="flex items-center gap-[1.6rem] ">
           <h2 className="tracking-[-2%] text-[2rem] lg:text-[3.4rem] leading-[4rem] font-bold text-grey-300 inline-flex gap-[.4rem] items-center ">
             Wallet Ledger
-            <i className="size-[.4rem] px-[.6rem] py-[.9rem] text-grey-300 ">
+            <i className="size-[.4rem] px-[.6rem] py-[.9rem] text-grey-300 cursor-pointer ">
               <CaretIcon />
             </i>
           </h2>
@@ -22,11 +22,11 @@ export default function DashboardHeader() {
         <div className="flex gap-[1.2rem] items-center">
           <button
             type="button"
-            className="bg-green-200 text-grey-700 px-[1.8rem] py-[.8rem] rounded-[1.6rem] font-medium"
+            className="bg-green-200 text-grey-700 px-[1.8rem] py-[.8rem] rounded-[1.6rem] font-medium cursor-pointer"
           >
             Share
           </button>
-          <i className="border-[.15rem] border-grey-50/[20%] rounded-[1.6rem] p-[.7rem] ">
+          <i className="border-[.15rem] border-grey-50/[20%] rounded-[1.6rem] p-[.7rem] cursor-pointer ">
             <DotsHorizontalIcon />
           </i>
         </div>
