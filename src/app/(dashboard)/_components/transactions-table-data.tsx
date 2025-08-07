@@ -9,7 +9,7 @@ export interface Transaction {
   type: "Credit" | "Debit";
 }
 
-export default function TransactionsTable({
+export default function TransactionsTableData({
   amount,
   currency,
   date,

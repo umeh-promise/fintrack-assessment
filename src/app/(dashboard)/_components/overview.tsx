@@ -1,7 +1,7 @@
 import { useState } from "react";
 import OverviewCard, { type Summary } from "./overview-card";
 import Table from "./table";
-import TransactionsTable, { Transaction } from "./transactions-table";
+import TransactionsTableData, { Transaction } from "./transactions-table-data";
 
 const summary: Summary[] = [
   {
@@ -168,7 +168,7 @@ export default function Overview() {
         onSort={handleSort}
       >
         {sortedData.map((transaction) => (
-          <TransactionsTable key={transaction.id} {...transaction} />
+          <TransactionsTableData key={transaction.id} {...transaction} />
         ))}
       </Table>
     </section>
