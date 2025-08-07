@@ -64,7 +64,7 @@ export default function Sidebar({
     >
       <nav
         className={cn(
-          "fixed top-0 left-0 h-full w-[28rem] bg-background z-50 flex flex-col transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:z-auto -translate-x-full no-scrollbar gap-y-[2.8rem] overflow-y-auto text-grey-300 md:flex p-[2rem] lg:w-full ",
+          "fixed top-0 left-0 h-full w-[28rem] bg-background z-50 flex flex-col transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:z-auto -translate-x-full no-scrollbar gap-y-[2.8rem] overflow-y-auto text-grey-300 md:flex p-[2rem] lg:p-0 lg:w-full ",
           {
             "translate-x-0": showMobileSidebar,
           }
